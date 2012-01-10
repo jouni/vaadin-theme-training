@@ -17,11 +17,17 @@ public class TwitterSearch {
         reset();
     }
 
+    /**
+     * Clears the search and resets the paging.
+     */
     public void reset() {
         sinceId = DEFAULT_ID;
         maxId = DEFAULT_ID;
     }
 
+    /**
+     * Gets older tweets.
+     */
     public List<Tweet> more() {
         setQueryRange(DEFAULT_ID, maxId);
         List<Tweet> tweets = search(query);
@@ -34,6 +40,9 @@ public class TwitterSearch {
         return tweets;
     }
 
+    /**
+     * Gets newer tweets.
+     */
     public List<Tweet> latest() {
         setQueryRange(sinceId, DEFAULT_ID);
         List<Tweet> tweets = search(query);
@@ -71,27 +80,6 @@ public class TwitterSearch {
         return tweets.get(0).getId();
     }
 
-    public static class Query {
-
-        private String searchString;
-
-        public Query(String query) {
-            searchString = query;
-        }
-
-        public void setSinceId(long since) {
-            // stubbed out
-        }
-
-        public void setMaxId(long max) {
-            // stubbed out
-        }
-
-        public String getQuery() {
-            return searchString;
-        }
-    }
-
     public static class Tweet {
         private static final String[] loremIpsum = { "lorem", "ipsum", "dolor",
                 "sit", "amet", "consectetur", "adipisicing", "elit", "sed",
@@ -110,7 +98,7 @@ public class TwitterSearch {
         private int id;
         private String text;
 
-        public Tweet() {
+        Tweet() {
             id = lastId++;
             StringBuilder builder = new StringBuilder();
             double length = 2 + new Random().nextInt(138);
@@ -127,6 +115,9 @@ public class TwitterSearch {
             return id;
         }
 
+        /**
+         * The name of the user that posted this tweet.
+         */
         public String getFromUser() {
             return loremIpsum();
         }
@@ -135,12 +126,39 @@ public class TwitterSearch {
             return loremIpsum[new Random().nextInt(loremIpsum.length)];
         }
 
-        public Object getCreatedAt() {
+        /**
+         * The date on which this tweet was posted.
+         */
+        public Date getCreatedAt() {
             return new Date();
         }
 
+        /**
+         * Gets the message body of this tweet.
+         */
         public String getText() {
             return text;
+        }
+    }
+
+    private static class Query {
+
+        private String searchString;
+
+        Query(String query) {
+            searchString = query;
+        }
+
+        public void setSinceId(long since) {
+            // stubbed out
+        }
+
+        public void setMaxId(long max) {
+            // stubbed out
+        }
+
+        public String getQuery() {
+            return searchString;
         }
     }
 }
