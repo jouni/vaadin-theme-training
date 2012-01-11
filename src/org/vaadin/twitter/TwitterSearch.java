@@ -55,6 +55,10 @@ public class TwitterSearch {
         return tweets;
     }
 
+    public String getQueryString() {
+        return query.getQuery();
+    }
+
     private void setQueryRange(long since, long max) {
         query.setSinceId(since);
         query.setMaxId(max);
@@ -102,8 +106,6 @@ public class TwitterSearch {
             id = lastId++;
             StringBuilder builder = new StringBuilder();
             double length = 2 + new Random().nextInt(138);
-
-            System.out.println(length);
 
             while (builder.length() <= length) {
                 builder.append(loremIpsum()).append(' ');
