@@ -1,0 +1,105 @@
+.v-app,
+.v-window,
+.v-popupview-popup,
+.v-tooltip,
+.v-app input,
+.v-app select,
+.v-app button,
+.v-app textarea,
+.v-window input,
+.v-window select,
+.v-window button,
+.v-window textarea,
+.v-popupview-popup input,
+.v-popupview-popup select,
+.v-popupview-popup button,
+.v-popupview-popup textarea,
+.v-filterselect-suggestpopup,
+.v-datefield-popup,
+.v-contextmenu,
+.v-Notification,
+.v-menubar-submenu,
+.v-drag-element {
+	font-family: "Helvetica Neue", Arial, sans-serif;
+	font-size: 14px;
+	color: #fff;
+	}
+
+.v-app {
+	background: #ddc9b1 url(img/city-bg.jpg) no-repeat 0 50%;
+	}	
+	
+.logo {
+	background: url(img/logo.png) no-repeat;
+	width: 182px;
+	height: 50px;
+	text-indent: -9999px;
+	}
+	
+	
+.main-layout {
+	position: relative;
+	margin: 0px auto;
+	max-width: 960px;
+	min-width: 768px;
+	}
+
+.main-layout > .v-csslayout-margin {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+	
+.content {
+	position: absolute;
+	left: 260px;
+	right: 0;
+	top: 30px;
+	bottom: 0;
+    }
+
+.layout-panel {
+	background: transparent url(img/dark-panel-bg.png);
+	}
+
+.layout-panel, 
+.search-bar .v-textfield {
+	-webkit-border-radius: 6px;
+	 border-radius: 6px;  
+	}
+	
+.search-bar {
+	position: relative;
+}
+
+.search-bar .search-button{
+	position: absolute;
+	right: 17px;
+	top: 13px;
+}
+.search-bar input.v-textfield {
+	height: 57px;
+	width: 100%;
+	padding: 0 200px 0 60px;
+	background: transparent url(img/icons.png) no-repeat 12px -36px;
+	border: 0;
+	margin: 0;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.search-bar .v-textfield:focus {
+	border: 2px solid #fff;
+	outline: none;
+	}
+
+
+
+.search-bar .v-button:focus + .v-textfield {
+	border: 2px solid #fff;
+}
+
+
+	
+
+
+	

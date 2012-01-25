@@ -1,4 +1,7 @@
 @CHARSET "UTF-8";
 
-@IMPORT url("../chameleon/styles.css");
+@IMPORT url("../base/styles.css");
 
+@IMPORT url("components/button/button.css");
+
+@IMPORT url("common/common.css");
