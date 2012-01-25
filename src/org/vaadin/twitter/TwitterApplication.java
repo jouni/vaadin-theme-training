@@ -1,19 +1,22 @@
 package org.vaadin.twitter;
 
 import com.vaadin.Application;
+import com.vaadin.ui.CssLayout;
 import com.vaadin.ui.HorizontalLayout;
 import com.vaadin.ui.Window;
 
 public class TwitterApplication extends Application {
 
-    private TweetsContent tweetsContent;
+	private static final long serialVersionUID = 1874601784886118816L;
+	private TweetsContent tweetsContent;
     private Sidebar sidebar;
 
     @Override
     public void init() {
         setTheme("twitter");
-        HorizontalLayout mainLayout = new HorizontalLayout();
+        CssLayout mainLayout = new CssLayout();
         mainLayout.setSizeFull();
+        mainLayout.addStyleName("main-layout");
         Window mainWindow = new Window("Twitter search", mainLayout);
         setMainWindow(mainWindow);
 
@@ -21,11 +24,10 @@ public class TwitterApplication extends Application {
         sidebar.setWidth("200px");
         tweetsContent = new TweetsContent();
         tweetsContent.setSizeFull();
+        tweetsContent.addStyleName("content");
 
         mainLayout.addComponent(sidebar);
         mainLayout.addComponent(tweetsContent);
-
-        mainLayout.setExpandRatio(tweetsContent, 1.0f);
     }
 
     public void doSearch(String searchTerms) {

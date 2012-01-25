@@ -1,0 +1,42 @@
+.v-button {
+	background: transparent url(img/button-big.png) no-repeat 0 0;
+	border: none;
+	height: 40px;
+	padding: 0 0 0 20px;
+	}
+	
+.v-button .v-button-wrap {
+	background: transparent url(img/button-big.png) no-repeat 100% -40px;
+	border: none;
+	height: 40px;
+	display: inline-block;
+	padding-right:20px;
+	}
+	
+.v-button-caption {
+	color:black;
+	line-height:32px;
+	}
+	
+.v-button:focus {
+	background-position: 0 -80px;
+	outline: none;
+	}
+	
+.v-button:focus .v-button-wrap {
+	background-position: 100% -120px;
+	}
+	
+
+.v-button:active {
+	background-position: 0 -160px;
+	outline: none;
+	}
+	
+.v-button:active .v-button-wrap {
+	background-position: 100% -200px;
+	}
+	
+.v-button:active .v-button-caption {
+	color:white;
+	}

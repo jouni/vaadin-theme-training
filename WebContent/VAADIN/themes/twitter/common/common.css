@@ -1,0 +1,85 @@
+.v-app {
+	background: #373739 url(img/city-bg.jpg) no-repeat 50%;
+	background-size: cover;
+}
+
+.v-app,
+.v-window,
+.v-popupview-popup,
+.v-tooltip,
+.v-app input,
+.v-app select,
+.v-app button,
+.v-app textarea,
+.v-window input,
+.v-window select,
+.v-window button,
+.v-window textarea,
+.v-popupview-popup input,
+.v-popupview-popup select,
+.v-popupview-popup button,
+.v-popupview-popup textarea,
+.v-filterselect-suggestpopup,
+.v-datefield-popup,
+.v-contextmenu,
+.v-Notification,
+.v-menubar-submenu,
+.v-drag-element,
+.v-table-header-drag  {
+	font-family: "Helvetica Neue", Arial, sans-serif;
+	font-size: 14px;
+	line-height: normal;
+	color: #fff;
+	}
+
+.logo {
+	background-image: url(img/logo.png);
+	background-repeat: no-repeat;
+	text-indent: -9999px;
+	height: 50px;
+	}
+	
+.main-layout {
+	width: auto !important;
+	min-width: 700px;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 20px;
+	position: relative;
+	}
+	
+.content {
+	height: auto !important;
+	width: auto !important;
+	position: absolute;
+	left: 260px;
+	top: 32px;
+	right: 0;
+	bottom: 0;
+	}
+	
+.content .tweets {
+	height: auto !important;
+	position: absolute;
+	top: 87px;
+	left: 0;
+	right: 0;
+	bottom: 0;	
+	}
+
+.search-bar input.v-textfield {
+	background: transparent;
+	padding-left: 60px;
+	padding-right: 170px;
+	height: 59px;
+	border: none;
+	width: 100%;
+	
+	box-sizing: border-box;
+	}
+
+.search-bar .v-button {
+	position: absolute;
+	right: 10px;
+	top: 5px;
+	}

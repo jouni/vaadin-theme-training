@@ -1,18 +1,31 @@
 package org.vaadin.twitter;
 
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.ui.CssLayout;
+import com.vaadin.ui.Label;
 
-public class Sidebar extends VerticalLayout {
+public class Sidebar extends CssLayout {
 
-    private SidebarList favoritesList;
+	private static final long serialVersionUID = -1458716135182528943L;
+	private SidebarList favoritesList;
     private SidebarList historyList;
 
     public Sidebar() {
+    	
+    	Label logo = new Label("Kieppi");
+    	logo.setStyleName("logo");
+    	addComponent(logo);
+    	
+    	CssLayout panelWrap = new CssLayout();
+    	panelWrap.addStyleName("panel");
+    	panelWrap.addStyleName("sidebar");
+    	
         favoritesList = new SidebarList("Favorites");
-        addComponent(favoritesList);
+        panelWrap.addComponent(favoritesList);
 
         historyList = new SidebarList("History");
-        addComponent(historyList);
+        panelWrap.addComponent(historyList);
+        
+        addComponent(panelWrap);
     }
 
     public void addToHistory(String searchTerm) {
