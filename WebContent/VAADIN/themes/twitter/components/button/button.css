@@ -1,0 +1,39 @@
+@CHARSET "UTF-8";
+
+.v-button {
+	height: 40px;
+	border: none;
+	padding: 0;
+	padding-left: 20px;
+	background: transparent url(img/button-big.png);	
+}
+
+.v-button:focus{
+	background-position: 0 -80px;
+	outline: none;
+}
+
+.v-button:active{
+	background-position: 0 -160px;
+}
+
+.v-button-caption {
+	line-height: 37px;
+}
+
+.v-button-wrap {
+	height: 40px;
+	background: transparent url(img/button-big.png);	
+	background-position: right -40px;
+	display: block;
+	padding-right: 40px;
+	padding-left: 20px;
+}
+
+.v-button:focus .v-button-wrap {
+	background-position: right -120px;
+}
+
+.v-button:active .v-button-wrap {
+	background-position: right -200px;
+}	

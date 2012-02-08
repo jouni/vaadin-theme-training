@@ -4,12 +4,13 @@ import com.vaadin.event.ShortcutAction.KeyCode;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Button.ClickListener;
+import com.vaadin.ui.CssLayout;
 import com.vaadin.ui.HorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.TextField;
 import com.vaadin.ui.VerticalLayout;
 
-public class SearchBar extends VerticalLayout {
+public class SearchBar extends CssLayout {
 
     private TextField search;
     private Button doSearch;
@@ -20,6 +21,7 @@ public class SearchBar extends VerticalLayout {
 
     public SearchBar() {
         search = new TextField();
+        search.setInputPrompt("Search...");
         doSearch = new Button("Search");
         doSearch.addListener(new Button.ClickListener() {
             public void buttonClick(ClickEvent event) {
@@ -29,12 +31,10 @@ public class SearchBar extends VerticalLayout {
         });
 
         doSearch.setClickShortcut(KeyCode.ENTER);
-        HorizontalLayout fieldsLayout = new HorizontalLayout();
-        fieldsLayout.addComponent(search);
-        fieldsLayout.addComponent(doSearch);
+        addComponent(search);
+        addComponent(doSearch);
         resultsLayout = new HorizontalLayout();
 
-        addComponent(fieldsLayout);
         addComponent(resultsLayout);
 
         searchResultLabel = new Label();

@@ -11,14 +11,9 @@ import com.vaadin.ui.VerticalLayout;
 
 public class TweetsContent extends CssLayout {
 
-    private SearchBar searchBar;
-
     private Panel tweetsContent;
 
     public TweetsContent() {
-        searchBar = new SearchBar();
-        addComponent(searchBar);
-
         tweetsContent = new Panel();
         tweetsContent.setSizeFull();
         ((VerticalLayout) tweetsContent.getContent()).setSpacing(true);
@@ -27,8 +22,6 @@ public class TweetsContent extends CssLayout {
     }
 
     public void setSearchResult(final TwitterSearch result) {
-        searchBar.updateSearchHeader(result.getQueryString());
-
         tweetsContent.removeAllComponents();
         for (Tweet tweet : result.latest()) {
             TweetLayout tweetlayout = new TweetLayout(tweet);
